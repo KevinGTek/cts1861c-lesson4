@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePeak Solutions | Professional Web Design</title>
+    <style>
+        /* CSS Variables based on Brand Colors */
+        :root {
+            --primary-blue: #0b2d5c;
+            --accent-yellow: #ffd54f;
+            --accent-pink: #ff0066;
+            --text-dark: #333333;
+            --bg-light: #f4f4f4;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Section 1 & 2 Fixes: Structure, Simplicity, and CARP */
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        /* Branding Fix: Clean Header & Professional Slogan */
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--accent-yellow);
+        }
+
+        /* UI Fix: Clear Navigation Structure */
+        nav {
+            background-color: var(--bg-light);
+            border-bottom: 2px solid #ddd;
+            padding: 0 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            padding: 1rem 0;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-pink);
+        }
+
+        /* ERBU Fix: Grid Layout for Balance and Rhythm */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        /* Legal Fix: Stock Image Formatting and Alt Tags */
+        .portfolio {
+            margin-top: 2rem;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .grid-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .grid-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        /* UI Tolerance & Legal Fix: Form Improvements */
+        aside {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 5px solid var(--accent-pink); /* Utilizing the pink accent */
+            height: fit-content;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--primary-blue);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        /* Legal Fix: Explicit GDPR/CAN-SPAM Consent */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            color: var(--text-dark);
+        }
+
+        .checkbox-group input {
+            margin-top: 0.2rem;
+        }
+
+        button {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--accent-pink);
+            color: white;
+        }
+
+        /* Visibility Fix: High Contrast Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-yellow);
+            text-decoration: underline;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BluePeak</h1>
+        <p>Innovative Web Solutions. Since 2025.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h2>Elevate Your Digital Presence</h2>
+            <p>BluePeak Solutions is your premier partner for comprehensive digital services. We specialize in building responsive websites, developing robust applications, and executing targeted marketing campaigns to help your business thrive.</p>
+            <p>Our core services include UI/UX design, custom web development, e-commerce solutions, and digital branding.</p>
+
+            <div class="portfolio">
+                <h2>Featured Work</h2>
+                
+                <img src="https://picsum.photos/id/0/800/300" alt="Laptop showing coding interface" class="hero-img">
+                <div class="caption">Featured digital project. Image licensed via Unsplash (CC0).</div>
+
+                <div class="grid-images">
+                    <div>
+                        <img src="https://picsum.photos/id/42/400/300" alt="Coffee cup and notebook on a desk">
+                        <div class="caption">Product photography. Licensed via Unsplash.</div>
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/id/122/400/300" alt="Modern city skyline at dusk">
+                        <div class="caption">Urban lifestyle branding. Licensed via Unsplash.</div>
+                    </div>
+                </div>
+                
+                <p>We deliver sleek, innovative, and user-centric designs tailored to your specific industry needs.</p>
+            </div>
+        </main>
+
+        <aside>
+            <h2>Request a Quote</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Fill out the form below and our team will respond within 24 hours.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Interested Service</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a service...</option>
+                        <option value="web">Web Design & Development</option>
+                        <option value="seo">SEO & Marketing</option>
+                        <option value="branding">Branding & Identity</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="marketing" name="marketing">
+                    <label for="marketing">I agree to receive promotional emails and newsletters from BluePeak Solutions. I understand I can unsubscribe at any time.</label>
+                </div>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BluePeak Solutions. All Rights Reserved.</p>
+        <p>Read our <a href="#">Privacy Policy</a> | <a href="#">Manage Email Preferences</a></p>
+    </footer>
+
+</body>
+</html>
